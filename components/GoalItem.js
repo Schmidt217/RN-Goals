@@ -1,4 +1,3 @@
-import React from "react";
 import { StyleSheet, View, Text, TouchableOpacity, Button } from "react-native";
 
 const GoalItem = (props) => {
@@ -8,9 +7,9 @@ const GoalItem = (props) => {
 			<TouchableOpacity
 				activeOpacity={0.5}
 				onPress={props.onDelete.bind(this, props.id)}
-				style={styles.deleteButton}
+				style={styles.button}
 			>
-				<Text style={{ color: "red" }}>X</Text>
+				<Text>❌</Text>
 			</TouchableOpacity>
 		</View>
 	);
@@ -24,8 +23,10 @@ const styles = StyleSheet.create({
 		borderColor: "black",
 		borderWidth: 1,
 		marginVertical: 10,
+		textDecorationLine: "line-through",
+		textDecorationStyle: "solid",
 	},
-	deleteButton: {
+	button: {
 		marginLeft: "auto",
 	},
 });
